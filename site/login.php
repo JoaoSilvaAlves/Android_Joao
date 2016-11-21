@@ -1,8 +1,8 @@
 <?php
 require_once "connexion.php";
 header('content-Type: application/json ');
-$user_name = $_POST["v_username"];
-$user_pass = $_POST["v_password"];
+$user_name = $_POST["user_name"];
+$user_pass = $_POST["password"];
 $cnn = getConnexion("my_bd");
 
 if(!$cnn)
@@ -19,16 +19,15 @@ $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_OBJ);
 if(!$row)
 {
-	echo 'false';
+	echo 'Connection failed - Verify your data';
 	exit;
 }
 
-//Renvoi
-echo '{"users" : ['.json_encode($row);
+echo 'Bonjour Monsieur ' . $user_name . ' !';
+echo 'Vos droits sont : ' . $row->role;
+/*//Renvoi
 while($row = $stmt->fetch(PDO::FETCH_OBJ))
 {
-	echo ','.json_encode($row);
 	echo 'Bonjour, bonne connexion';
-}
-echo ']}';
+}*/
 ?>
