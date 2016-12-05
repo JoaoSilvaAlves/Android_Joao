@@ -1,0 +1,47 @@
+#------- Equipes d'un tournoi spécifique ---------
+SELECT * from tbl_equipes
+INNER JOIN tbl_groupes ON tbl_groupes.numero = tbl_equipes.num_tbl_groupes
+INNER JOIN tbl_tournois ON tbl_tournois.numero = tbl_groupes.num_tbl_tournois
+WHERE tbl_tournois.numero = 1
+
+
+
+
+
+#------- Matchs d'une équipe lors d'un tournoi spécifique ---------
+SELECT * from tbl_matchs
+INNER JOIN tbl_equipes ON tbl_equipes.numero = tbl_matchs.num_tbl_equipes_home
+WHERE tbl_equipes.numero = 2
+
+UNION
+
+SELECT * from tbl_matchs
+INNER JOIN tbl_equipes ON tbl_equipes.numero = tbl_matchs.num_tbl_equipes_visiteur
+WHERE tbl_equipes.numero = 2
+
+
+
+
+
+
+#------ Matchs se déroulant lors d'un tournoi
+
+
+
+#----- Matchs se déroulant lors d'un tournoi pour un groupe spécifique
+
+
+#--------Matchs se déroulant sur un terrain spécifique
+
+
+
+#------ Liste buts/sets marqués lors d'un match pour une équipe
+
+
+#------ nombre buts/sets marqués lors d'un match pour une équipe
+
+#--- nombre de buts/sets marqués par l'équipe 3 lors du match numéro 7
+
+#------ nombre buts/sets marqués d'une équipe appartenant à un groupe
+
+#----- buts marqués par les équipes d'un groupe
