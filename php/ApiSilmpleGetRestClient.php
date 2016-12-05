@@ -6,7 +6,7 @@ class ApiSimpleGetRestClient
     /*
      * Contructor
      */
-    public function ApiSimpleGetRestClient($host, $user='', $password='')
+    public function __construct($host, $user='', $password='')
     {
         $this->hostUrl = $host.'/';
         $this->userAuth = $user;

@@ -12,3 +12,5 @@ var_dump($data['fcst_day_0']['hourly_data']['12H00']);
 //var_dump($data); //Toutes les données sur plusieurs jours
 //var_dump($data['fcst_day_0']); //Pour le jours en cours
 //var_dump($data['fcst_day_2']); //Pour dans deux jours
+
+?>
