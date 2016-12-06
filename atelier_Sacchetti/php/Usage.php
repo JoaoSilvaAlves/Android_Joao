@@ -1,16 +1,28 @@
 <?php
+include_once('class/ApiSimpleGetRestClient.php');
 
-require_once 'class/ApiSimpleGetRestClient.php';
-$client = new ApiSimpleGetRestClient('http://www.prevision-meteo.ch/services/json');
-$response = $client->get('Neuchâtel');
-$data = json_decode(($response), True);
-echo 'Ville : '.$data['city_info']['name'].'</br>';
-echo 'Date du jour : '.$data['current_condition']['date'].'</br>';
-echo 'Temp : '.$data['current_condition']['tmp'].'deg.</br>';
-
-var_dump($data['fcst_day_0']['hourly_data']['12H00']);
-//var_dump($data); //Toutes les données sur plusieurs jours
-//var_dump($data['fcst_day_0']); //Pour le jours en cours
-//var_dump($data['fcst_day_2']); //Pour dans deux jours
+$clientTransports = new ApiSimpleGetRestClient('http://transport.opendata.ch/v1');
+$responseTransports=$clientTransports->get('stationboard?station=Neuchâtel&limit=10)');
+$dataTransports = json_decode(($responseTransports),True);
 
 ?>
+
+<html>
+	<body>
+		<table style="width:100%" border="1p" border-collapse: "collapse">
+			<tr>
+				<th>Pays</th>
+				<th>Nombre d'habitants</th> 
+				<th>Capitale</th>
+			</tr>
+			
+			<?php
+			foreach($dataTransports as $name => $value){
+				echo'<tr>',
+				'<td>', $value['id'], '</td>',
+				'</tr>';
+			}
+			?>
+		</table>
+	</body>
+</html>
