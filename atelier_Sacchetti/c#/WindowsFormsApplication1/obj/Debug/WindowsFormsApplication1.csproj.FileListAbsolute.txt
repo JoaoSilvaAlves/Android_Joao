@@ -1,0 +1,11 @@
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+\\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml

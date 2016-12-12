@@ -19,7 +19,7 @@ $dataTransports = json_decode(($responseTransports),True);
 			<?php
 			foreach($dataTransports as $name => $value){
 				echo'<tr>',
-				'<td>', $value['id'], '</td>',
+				'<td>', $value['departure'], '</td>',
 				'</tr>';
 			}
 			?>
