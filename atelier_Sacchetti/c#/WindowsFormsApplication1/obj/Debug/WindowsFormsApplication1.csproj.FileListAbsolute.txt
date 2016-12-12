@@ -9,3 +9,14 @@
 \\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 \\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
 \\s2.rpn.ch\home\cpln\eleves\et\silvaajo\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

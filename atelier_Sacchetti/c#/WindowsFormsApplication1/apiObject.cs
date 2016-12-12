@@ -45,5 +45,4 @@ namespace WindowsFormsApplication1
         public string ja { get; set; }
         public string it { get; set; }
     }
-
 }
