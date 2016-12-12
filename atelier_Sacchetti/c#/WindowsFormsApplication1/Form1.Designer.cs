@@ -62,7 +62,7 @@
             "Asia"});
             this.cbx_Region.Location = new System.Drawing.Point(81, 22);
             this.cbx_Region.Name = "cbx_Region";
-            this.cbx_Region.Size = new System.Drawing.Size(591, 21);
+            this.cbx_Region.Size = new System.Drawing.Size(521, 21);
             this.cbx_Region.TabIndex = 0;
             this.cbx_Region.SelectedIndexChanged += new System.EventHandler(this.cbx_Region_SelectedIndexChanged);
             // 
@@ -71,7 +71,7 @@
             this.cbx_Pays.FormattingEnabled = true;
             this.cbx_Pays.Location = new System.Drawing.Point(81, 79);
             this.cbx_Pays.Name = "cbx_Pays";
-            this.cbx_Pays.Size = new System.Drawing.Size(591, 21);
+            this.cbx_Pays.Size = new System.Drawing.Size(521, 21);
             this.cbx_Pays.TabIndex = 1;
             this.cbx_Pays.SelectedIndexChanged += new System.EventHandler(this.cbx_Pays_SelectedIndexChanged);
             // 
@@ -98,7 +98,7 @@
             this.lstBox_Informations.FormattingEnabled = true;
             this.lstBox_Informations.Location = new System.Drawing.Point(81, 120);
             this.lstBox_Informations.Name = "lstBox_Informations";
-            this.lstBox_Informations.Size = new System.Drawing.Size(591, 251);
+            this.lstBox_Informations.Size = new System.Drawing.Size(521, 251);
             this.lstBox_Informations.TabIndex = 4;
             // 
             // tabControl1
@@ -109,7 +109,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(708, 411);
+            this.tabControl1.Size = new System.Drawing.Size(623, 411);
             this.tabControl1.TabIndex = 5;
             this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
             // 
@@ -123,7 +123,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(700, 385);
+            this.tabPage1.Size = new System.Drawing.Size(615, 385);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(700, 385);
+            this.tabPage2.Size = new System.Drawing.Size(615, 385);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -144,12 +144,11 @@
             // 
             this.grBox_CDF.Controls.Add(this.pctBox_CDF);
             this.grBox_CDF.Controls.Add(this.lstBox_CDF);
-            this.grBox_CDF.Location = new System.Drawing.Point(412, 44);
+            this.grBox_CDF.Location = new System.Drawing.Point(337, 44);
             this.grBox_CDF.Name = "grBox_CDF";
             this.grBox_CDF.Size = new System.Drawing.Size(234, 300);
             this.grBox_CDF.TabIndex = 1;
             this.grBox_CDF.TabStop = false;
-            this.grBox_CDF.Text = "La Chaux-de-Fonds";
             // 
             // pctBox_CDF
             // 
@@ -204,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 411);
+            this.ClientSize = new System.Drawing.Size(623, 411);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "JSon Web Services";

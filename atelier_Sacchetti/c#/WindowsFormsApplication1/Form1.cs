@@ -20,8 +20,11 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
+
+            tabControl1.SelectedIndex = 1;
+
             GetCurrentWeather("Neuchatel");
-            GetCurrentWeather("La-Chaux-de-Fonds");
+            GetCurrentWeather("Yverdon-les-bains");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -70,31 +73,36 @@ namespace WindowsFormsApplication1
 
         private void GetCurrentWeather(string city)
         {
-            AllForecast ActualWeather = new AllForecast();
-            string endPoint = "http://www.prevision-meteo.ch/services/json/" + city;
-            var client = new RestClient(endPoint);
-            var json = client.MakeRequest();
-            object objJsonResponse = JsonConvert.DeserializeObject(json, typeof(AllForecast));
-
-            //Convertir dans le type voulu
-            ActualWeather = (AllForecast)objJsonResponse;
-
-            if (city == "Neuchatel")  
+            try
             {
-                lstBox_NE.Items.Clear();
-                lstBox_NE.Items.Add(ActualWeather.city_info.name);
-                lstBox_NE.Items.Add(ActualWeather.current_condition.condition + Environment.NewLine);
-                lstBox_NE.Items.Add(ActualWeather.current_condition.tmp + "°C" + Environment.NewLine);
-                pctBox_NE.Load(ActualWeather.current_condition.icon_big);
-            }
+                AllForecast ActualWeather = new AllForecast();
+                string endPoint = "http://www.prevision-meteo.ch/services/json/" + city;
+                var client = new RestClient(endPoint);
+                var json = client.MakeRequest();
+                object objJsonResponse = JsonConvert.DeserializeObject(json, typeof(AllForecast));
 
-            if(city == "La-Chaux-de-Fonds")
-            {
+                //Convertir dans le type voulu
+                ActualWeather = (AllForecast)objJsonResponse;
+
+                grBox_CDF.Text = ActualWeather.city_info.name + " " + ActualWeather.current_condition.hour;
+
+                if (city == "Neuchatel")
+                {
+                    lstBox_NE.Items.Clear();
+                    grBox_NE.Text = ActualWeather.city_info.name + " " + ActualWeather.current_condition.hour;
+                    lstBox_NE.Items.Add(ActualWeather.current_condition.condition + Environment.NewLine);
+                    lstBox_NE.Items.Add(ActualWeather.current_condition.tmp + "°C" + Environment.NewLine);
+                    pctBox_NE.Load(ActualWeather.current_condition.icon_big);
+                }
+
                 lstBox_CDF.Items.Clear();
-                lstBox_CDF.Items.Add(ActualWeather.city_info.name);
                 lstBox_CDF.Items.Add(ActualWeather.current_condition.condition + Environment.NewLine);
                 lstBox_CDF.Items.Add(ActualWeather.current_condition.tmp + "°C" + Environment.NewLine);
                 pctBox_CDF.Load(ActualWeather.current_condition.icon_big);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void tabControl1_Enter(object sender, EventArgs e)
