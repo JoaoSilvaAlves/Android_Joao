@@ -19,4 +19,3 @@ D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication
 D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
-D:\JoaoSilvaAlves\atelier_2016-2017\atelier_Sacchetti\c#\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

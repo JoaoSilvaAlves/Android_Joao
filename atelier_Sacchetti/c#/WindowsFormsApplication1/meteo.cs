@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WindowsFormsApplication1
 {
 
-    public class AllPrevision
+    public class AllForecast
     {
         public City_Info city_info { get; set; }
         public Forecast_Info forecast_info { get; set; }

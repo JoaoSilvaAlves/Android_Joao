@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HttpUtils;
 using Newtonsoft.Json;
-using System.IO;
 
 namespace WindowsFormsApplication1
 {
@@ -21,16 +20,14 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
-            
+            GetCurrentWeather("Neuchatel");
+            GetCurrentWeather("La-Chaux-de-Fonds");
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             tabControl1.TabPages[0].Text = "Region-pays";
             tabControl1.TabPages[1].Text = "Meteo locale";
-
-            GetCurrentMeteo("Neuchatel");
-            GetCurrentMeteo("La-Chaux-de-Fonds");
         }
 
         private void cbx_Region_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,36 +63,43 @@ namespace WindowsFormsApplication1
             country = regionResponse._allRegionCountries.Find(x => x.name == cbx_Pays.Text);
 
             //Nouvelles données dans la liste des pays
-            lstB_Informations.Items.Clear();
-            lstB_Informations.Items.Add("Capitale : " + country.capital + Environment.NewLine);
-            lstB_Informations.Items.Add("Population : " + country.population + Environment.NewLine);
+            lstBox_Informations.Items.Clear();
+            lstBox_Informations.Items.Add("Capitale : " + country.capital + Environment.NewLine);
+            lstBox_Informations.Items.Add("Population : " + country.population + Environment.NewLine);
         }
 
-        private void GetCurrentMeteo(string ville)
+        private void GetCurrentWeather(string city)
         {
-            AllPrevision meteoActuelle = new AllPrevision();
-            string endPoint = "http://www.prevision-meteo.ch/services/json/" + ville;
+            AllForecast ActualWeather = new AllForecast();
+            string endPoint = "http://www.prevision-meteo.ch/services/json/" + city;
             var client = new RestClient(endPoint);
             var json = client.MakeRequest();
-            object objResponse = JsonConvert.DeserializeObject(json, typeof(AllPrevision));
+            object objJsonResponse = JsonConvert.DeserializeObject(json, typeof(AllForecast));
 
-            meteoActuelle.current_condition = (Current_Condition)objResponse;
+            //Convertir dans le type voulu
+            ActualWeather = (AllForecast)objJsonResponse;
 
-            if (ville == "Neuchâtel")
+            if (city == "Neuchatel")  
             {
-                lstBox_NE.Items.Add(meteoActuelle.city_info.name + Environment.NewLine);
-                lstBox_NE.Items.Add(meteoActuelle.current_condition.condition + Environment.NewLine);
-                lstBox_NE.Items.Add(meteoActuelle.current_condition.tmp + Environment.NewLine);
-                pctBox_CDF.Load(meteoActuelle.current_condition.icon);
+                lstBox_NE.Items.Clear();
+                lstBox_NE.Items.Add(ActualWeather.city_info.name);
+                lstBox_NE.Items.Add(ActualWeather.current_condition.condition + Environment.NewLine);
+                lstBox_NE.Items.Add(ActualWeather.current_condition.tmp + "°C" + Environment.NewLine);
+                pctBox_NE.Load(ActualWeather.current_condition.icon_big);
             }
 
-            if(ville == "La-Chaux-de-Fonds")
+            if(city == "La-Chaux-de-Fonds")
             {
-                lstBox_CDF.Items.Add(meteoActuelle.city_info.name + Environment.NewLine);
-                lstBox_CDF.Items.Add(meteoActuelle.current_condition.condition + Environment.NewLine);
-                lstBox_CDF.Items.Add(meteoActuelle.current_condition.tmp + Environment.NewLine);
-                pctBox_CDF.Load(@"http://www.prevision-meteo.ch/style/images/icon/ensoleille.png");
+                lstBox_CDF.Items.Clear();
+                lstBox_CDF.Items.Add(ActualWeather.city_info.name);
+                lstBox_CDF.Items.Add(ActualWeather.current_condition.condition + Environment.NewLine);
+                lstBox_CDF.Items.Add(ActualWeather.current_condition.tmp + "°C" + Environment.NewLine);
+                pctBox_CDF.Load(ActualWeather.current_condition.icon_big);
             }
+        }
+        private void tabControl1_Enter(object sender, EventArgs e)
+        {
+            //GetCurrentMeteo("Neuchatel");
         }
     }
 }

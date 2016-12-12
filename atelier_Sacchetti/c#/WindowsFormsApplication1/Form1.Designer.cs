@@ -32,7 +32,7 @@
             this.cbx_Pays = new System.Windows.Forms.ComboBox();
             this.lbl_Region = new System.Windows.Forms.Label();
             this.lbl_Pays = new System.Windows.Forms.Label();
-            this.lstB_Informations = new System.Windows.Forms.ListBox();
+            this.lstBox_Informations = new System.Windows.Forms.ListBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -93,13 +93,13 @@
             this.lbl_Pays.TabIndex = 3;
             this.lbl_Pays.Text = "Pays";
             // 
-            // lstB_Informations
+            // lstBox_Informations
             // 
-            this.lstB_Informations.FormattingEnabled = true;
-            this.lstB_Informations.Location = new System.Drawing.Point(81, 120);
-            this.lstB_Informations.Name = "lstB_Informations";
-            this.lstB_Informations.Size = new System.Drawing.Size(591, 251);
-            this.lstB_Informations.TabIndex = 4;
+            this.lstBox_Informations.FormattingEnabled = true;
+            this.lstBox_Informations.Location = new System.Drawing.Point(81, 120);
+            this.lstBox_Informations.Name = "lstBox_Informations";
+            this.lstBox_Informations.Size = new System.Drawing.Size(591, 251);
+            this.lstBox_Informations.TabIndex = 4;
             // 
             // tabControl1
             // 
@@ -111,13 +111,14 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(708, 411);
             this.tabControl1.TabIndex = 5;
+            this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.cbx_Region);
             this.tabPage1.Controls.Add(this.lbl_Region);
             this.tabPage1.Controls.Add(this.lbl_Pays);
-            this.tabPage1.Controls.Add(this.lstB_Informations);
+            this.tabPage1.Controls.Add(this.lstBox_Informations);
             this.tabPage1.Controls.Add(this.cbx_Pays);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -152,9 +153,12 @@
             // 
             // pctBox_CDF
             // 
-            this.pctBox_CDF.Location = new System.Drawing.Point(34, 172);
+            this.pctBox_CDF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctBox_CDF.Location = new System.Drawing.Point(7, 160);
             this.pctBox_CDF.Name = "pctBox_CDF";
-            this.pctBox_CDF.Size = new System.Drawing.Size(168, 111);
+            this.pctBox_CDF.Size = new System.Drawing.Size(221, 134);
             this.pctBox_CDF.TabIndex = 2;
             this.pctBox_CDF.TabStop = false;
             // 
@@ -179,9 +183,12 @@
             // 
             // pctBox_NE
             // 
-            this.pctBox_NE.Location = new System.Drawing.Point(31, 172);
+            this.pctBox_NE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctBox_NE.Location = new System.Drawing.Point(7, 160);
             this.pctBox_NE.Name = "pctBox_NE";
-            this.pctBox_NE.Size = new System.Drawing.Size(168, 111);
+            this.pctBox_NE.Size = new System.Drawing.Size(221, 134);
             this.pctBox_NE.TabIndex = 1;
             this.pctBox_NE.TabStop = false;
             // 
@@ -220,7 +227,7 @@
         private System.Windows.Forms.ComboBox cbx_Pays;
         private System.Windows.Forms.Label lbl_Region;
         private System.Windows.Forms.Label lbl_Pays;
-        private System.Windows.Forms.ListBox lstB_Informations;
+        private System.Windows.Forms.ListBox lstBox_Informations;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
